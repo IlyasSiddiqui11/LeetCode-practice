@@ -1,4 +1,4 @@
-package LeetCode;
+
 
 public class JumpGame {
     public static int jump(int[] nums) {

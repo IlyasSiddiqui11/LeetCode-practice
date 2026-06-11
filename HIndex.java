@@ -1,4 +1,4 @@
-package LeetCode;
+
 
 public class HIndex {
     public static int hIndex(int[] citations) {

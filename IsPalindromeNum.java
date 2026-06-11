@@ -1,4 +1,4 @@
-package LeetCode;
+
 
 public class IsPalindromeNum {
     public static boolean isPallindrome(int x) {
