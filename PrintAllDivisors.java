@@ -1,11 +1,17 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 public class PrintAllDivisors {
-    public static void divisors(int x){
+    public static List<Integer> divisors(int x){
+        List<Integer> list = new ArrayList<>();
         for(int i = 1;i<=x;i++){
             if (x % i == 0) {
-                System.out.println(i);
+                list.add(i);
             }
         }
+        list.sort(null);
+        return list;
     }
 
     // Better Time Complexity
@@ -21,6 +27,6 @@ public class PrintAllDivisors {
     }
 
     public static void main(String[] args) {
-        divisorsII(36);
+        System.out.println(divisors(36));
     }
 }
