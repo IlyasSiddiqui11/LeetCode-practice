@@ -9,10 +9,7 @@ public class isPrime {
                 count++;
             }
         }
-        if (count==2) {
-            return true;
-        }
-        return false;
+        return count == 2;
     }
 
     public static void main(String[] args) {
