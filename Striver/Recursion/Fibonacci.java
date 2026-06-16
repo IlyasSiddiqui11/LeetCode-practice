@@ -7,7 +7,7 @@ public class Fibonacci {
         }
         int lastDigit = fib(n-1);
         int secondLastDigit = fib(n-2);
-
+        // Time Complexity is O(2^n)
         return lastDigit + secondLastDigit;
     }
 }
