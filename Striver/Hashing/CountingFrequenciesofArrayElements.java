@@ -1,7 +1,6 @@
 package Striver.Hashing;
 
 import java.util.HashMap;
-import java.util.List;
 
 public class CountingFrequenciesofArrayElements {
     public static HashMap<Integer,Integer> countFrequencies(int[] nums) {
