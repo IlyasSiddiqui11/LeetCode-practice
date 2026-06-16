@@ -1,3 +1,5 @@
+package Striver.Hashing;
+
 public class CharacterHashing {
     public static int charOccurence(String s, char c) {
         // For lowercase characters hashing 

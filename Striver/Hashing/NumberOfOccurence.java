@@ -1,4 +1,4 @@
-// package Striver.Hashing;
+package Striver.Hashing;
 
 import java.util.HashMap;
 
