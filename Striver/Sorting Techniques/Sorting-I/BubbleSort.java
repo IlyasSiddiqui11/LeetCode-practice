@@ -1,5 +1,6 @@
 import java.util.Arrays;
 
+// Time Complexity is O(N^2) for every case 
 public class BubbleSort {
     public static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
