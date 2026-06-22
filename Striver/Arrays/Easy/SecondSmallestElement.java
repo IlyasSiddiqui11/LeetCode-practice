@@ -1,4 +1,4 @@
-// package Striver.Arrays.Easy;
+package Striver.Arrays.Easy;
 
 public class SecondSmallestElement {
     public static int secondSmallest(int[] nums) {
