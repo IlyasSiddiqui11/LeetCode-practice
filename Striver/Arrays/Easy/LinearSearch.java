@@ -1,4 +1,4 @@
-// package Striver.Arrays.Easy;
+package Striver.Arrays.Easy;
 
 public class LinearSearch {
     public static int linearSearch(int[] nums,int target){
