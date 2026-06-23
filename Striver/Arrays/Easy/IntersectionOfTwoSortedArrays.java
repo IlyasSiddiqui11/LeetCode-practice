@@ -5,6 +5,23 @@ import java.util.Arrays;
 import java.util.List;
 
 class IntersectionOfTwoSortedArrays {
+    public static List<Integer> optimalIntersectionOfArray(int[] arr1, int[] arr2){
+        List<Integer> intersection = new ArrayList<>();
+        int i = 0, j = 0;
+        while (i<arr1.length && j<arr2.length) {
+            if (arr1[i] == arr2[j]) {
+                intersection.add(arr1[i]);
+                i++;
+                j++;
+            }
+            else if (arr1[i] > arr2[j]) {
+                j++;
+            }
+            else 
+                i++;
+        }
+        return intersection;
+    }
     public static List<Integer> intersectionOfArray(int[] arr1, int[] arr2) {
         int i = 0, j = 0;
         List<Integer> intersection = new ArrayList<>();
@@ -28,6 +45,6 @@ class IntersectionOfTwoSortedArrays {
     public static void main(String[] args) {
         int[] arr1 = {0,1,1,2,3,4};
         int[] arr2 = {1,2,3,4,5};
-        System.out.println(intersectionOfArray(arr1, arr2));
+        System.out.println(optimalIntersectionOfArray(arr1, arr2));
     }
 }
