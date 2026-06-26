@@ -5,24 +5,24 @@ import java.util.TreeMap;
 public class LongestSubArrayWithSumK {
 
     // 
-    // public static int longestSubArrayWithSumK(int[] arr, int k) {
-    //     int sum = 0;
-    //     int len = 0;
-    //     Map<Integer, Integer> map = new TreeMap<>();
-    //     for (int i = 0; i < arr.length; i++) {
-    //         sum = sum + arr[i];
-    //         if (sum == k) {
-    //             len = Math.max(len, i + 1);
-    //         }
-    //         int rem = sum - k;
-    //         if (map.containsKey(rem)) {
-    //             len = Math.max(len, i - map.get(rem));
-    //         }
-    //         // map.put(sum, i); THIS IS FOR POSITIVE INTEGERS ONLY.
-    //         map.putIfAbsent(sum, i); // Also does for 0s and negatives.
-    //     }
-    //     return len;
-    // }
+    public static int longestSubArrayWithSumK(int[] arr, int k) {
+        int sum = 0;
+        int len = 0;
+        Map<Integer, Integer> map = new TreeMap<>();
+        for (int i = 0; i < arr.length; i++) {
+            sum = sum + arr[i];
+            if (sum == k) {
+                len = Math.max(len, i + 1);
+            }
+            int rem = sum - k;
+            if (map.containsKey(rem)) {
+                len = Math.max(len, i - map.get(rem));
+            }
+            // map.put(sum, i); THIS IS FOR POSITIVE INTEGERS ONLY.
+            map.putIfAbsent(sum, i); // Also does for 0s and negatives.
+        }
+        return len;
+    }
 
     // Only for positives
     public static int longestSubArrayWithSumKII(int[] arr,int k){
