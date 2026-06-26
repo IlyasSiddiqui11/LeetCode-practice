@@ -1,5 +1,3 @@
-package Striver.Arrays.Easy;
-
 public class MaxConsecutiveOnes {
     public static int findMaxConsecutiveOnes(int[] nums) {
         int count = 0;

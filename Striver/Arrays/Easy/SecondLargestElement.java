@@ -1,5 +1,3 @@
-package Striver.Arrays.Easy;
-
 public class SecondLargestElement {
     // Time Complexity O(2N)
     // Needs 2 passes 

@@ -1,5 +1,3 @@
-package Striver.Arrays.Easy;
-
 public class RemoveDuplicates {
     public static int removeDuplicates(int[] nums){
         int p = 0;

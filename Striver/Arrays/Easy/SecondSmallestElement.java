@@ -1,5 +1,3 @@
-package Striver.Arrays.Easy;
-
 public class SecondSmallestElement {
     public static int secondSmallest(int[] nums) {
         int secondSmallest = Integer.MAX_VALUE;

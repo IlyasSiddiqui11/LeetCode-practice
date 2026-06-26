@@ -1,5 +1,3 @@
-package Striver.Arrays.Easy;
-
 public class MissingNumber {
     //Using sum     TC: O(N) SC: O(1)
     public static int missingNumber(int[] nums){

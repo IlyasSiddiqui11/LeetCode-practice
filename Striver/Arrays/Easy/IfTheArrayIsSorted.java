@@ -1,4 +1,4 @@
-package Striver.Arrays.Easy;
+
 
 import java.util.ArrayList;
 
