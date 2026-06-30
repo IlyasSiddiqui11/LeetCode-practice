@@ -1,4 +1,4 @@
-# 🚀 DSA & LeetCode Solutions
+# 🚀 DSA & LeetCode Solutions.
 
 Welcome to my Data Structures and Algorithms repository! This repository contains my solutions to coding problems solved on LeetCode and other platforms as part of my journey to strengthen problem-solving skills and master core computer science concepts.
 
