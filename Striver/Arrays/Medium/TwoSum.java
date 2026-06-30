@@ -9,16 +9,15 @@ public class TwoSum {
         Arrays.sort(arr);
         int left = 0;
         int right = arr.length - 1;
-        int sum = 0;
         while (left < right) {
-            sum = arr[left] + arr[right];
-            if (sum == target) {
+            if (arr[left] + arr[right] == target) {
                 return "Yes";
             }
-            if (sum < target) {
+            if (arr[left] + arr[right] < target) {
                 left++;
-            } else if (sum > target)
+            } else if (arr[left] + arr[right] > target) {
                 right--;
+            }
         }
         return "No";
     }
