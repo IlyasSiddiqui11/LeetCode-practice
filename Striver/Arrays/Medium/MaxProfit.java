@@ -1,4 +1,4 @@
-// package Striver.Arrays.Medium;
+package Striver.Arrays.Medium;
 
 public class MaxProfit {
     public static int maxProfit(int[] prices) {
