@@ -1,8 +1,9 @@
-// package Striver.Arrays.Medium;
+package Striver.Arrays.Medium;
 
 import java.util.Arrays;
 
 public class RearrangeArrayElementsbySign {
+    //BRUTE
     // public static int[] rearrangeArray(int[] nums) {
     //     int[] pos = new int[nums.length / 2];
     //     int[] neg = new int[nums.length / 2];
@@ -22,6 +23,8 @@ public class RearrangeArrayElementsbySign {
     //     }
     //     return nums;
     // }
+
+    //OPTIMAL
     public static int[] rearrangeArray(int[] nums){
         int[] ans = new int[nums.length];
         int p = 0, q = 1;
