@@ -1,4 +1,4 @@
-package Striver.Arrays.Medium;
+// package Striver.Arrays.Medium;
 
 public class MaxProfit {
     public static int maxProfit(int[] prices) {
@@ -12,5 +12,10 @@ public class MaxProfit {
             }
         }
         return profit;
+    }
+
+    public static void main(String[] args) {
+        int[] prices = {7, 1, 5, 3, 6, 4};
+        System.out.println(maxProfit(prices));
     }
 }
