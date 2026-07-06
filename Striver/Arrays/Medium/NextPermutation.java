@@ -1,4 +1,4 @@
-package Striver.Arrays.Medium; 
+package Striver.Arrays.Medium;
 
 import java.util.Arrays;
 
@@ -15,6 +15,7 @@ public class NextPermutation {
         }
         if (ind == -1) {
             reverse(nums, 0, n - 1);
+            return;
         }
         for (int i = n - 1; i >= ind; i--) {
             if (nums[i] > nums[ind]) {
