@@ -1,4 +1,4 @@
-// package Striver.Arrays.Medium;
+package Striver.Arrays.Medium;
 
 public class SetMatrixZeroes {
     public static void setZeroes(int[][] matrix) {
