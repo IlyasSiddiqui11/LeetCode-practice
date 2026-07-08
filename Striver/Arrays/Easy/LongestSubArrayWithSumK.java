@@ -4,7 +4,6 @@ import java.util.TreeMap;
 
 public class LongestSubArrayWithSumK {
 
-    // 
     public static int longestSubArrayWithSumK(int[] arr, int k) {
         int sum = 0;
         int len = 0;
