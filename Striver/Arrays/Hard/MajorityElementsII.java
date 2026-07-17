@@ -71,8 +71,6 @@ public class MajorityElementsII {
             if (num == el1) {
                 cnt1++;
             }
-        }
-        for(int num : nums){
             if (num == el2) {
                 cnt2++;
             }
