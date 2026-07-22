@@ -18,6 +18,6 @@ public class CountSubarraywithXorK {
 
     public static void main(String[] args) {
         int[] arr = {4,2,2,6,4};
-        System.out.println(subarrayXorK(arr, 6));
+        System.out.println(subarrayXorK(arr, 0));
     }
 } 
