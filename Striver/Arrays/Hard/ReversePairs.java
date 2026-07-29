@@ -50,7 +50,12 @@ public class ReversePairs {
         } 
         return count;
     }
-    public int reversePairs(int[] nums) {
+    public static int reversePairs(int[] nums) {
         return mergeSort(nums, 0, nums.length-1);
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {40,25,19,12,9,6,2};
+        System.out.println(reversePairs(arr));
     }
 }
