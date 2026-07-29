@@ -44,8 +44,7 @@ public class CountInversions {
         return count;
     }
     public static int countInversion(int[] arr){
-        int count = mergeSort(arr, 0, arr.length - 1);
-        return count;
+        return mergeSort(arr, 0, arr.length - 1); 
     }
     
     public static void main(String[] args) {
