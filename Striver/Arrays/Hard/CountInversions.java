@@ -43,6 +43,7 @@ public class CountInversions {
         }
         return count;
     }
+    
     public static int countInversion(int[] arr){
         return mergeSort(arr, 0, arr.length - 1); 
     }
