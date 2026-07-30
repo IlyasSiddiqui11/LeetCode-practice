@@ -1,4 +1,4 @@
-public class BS1 {
+public class BS2 {
     public static int lowerBound(int[] arr, int x){
         int ans = arr.length;
         int low = 0, high = arr.length - 1;
