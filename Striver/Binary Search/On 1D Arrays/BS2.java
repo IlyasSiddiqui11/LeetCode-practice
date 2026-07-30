@@ -1,4 +1,8 @@
 public class BS2 {
+    // 1. Lower bound 
+    // 2. Upper Bound
+    // 3. Search Insert Position --> same as lower bound
+    // 4. Floor & Ceil
     public static int lowerBound(int[] arr, int x){
         int ans = arr.length;
         int low = 0, high = arr.length - 1;
