@@ -6,11 +6,9 @@ public class BinarySearch {
             if (nums[mid] == target) return mid;
             else if (nums[mid] > target) {
                 high = mid - 1;
-                mid = (low + high) / 2;
             } 
             else{
                 low = mid + 1;
-                mid = (low + high) / 2;
             }
         }
         return -1;
