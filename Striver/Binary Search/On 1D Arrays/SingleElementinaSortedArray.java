@@ -1,5 +1,5 @@
 public class SingleElementinaSortedArray {
-    public int singleNonDuplicate(int[] nums) {
+    public static int singleNonDuplicate(int[] nums) {
         if (nums.length == 1) return nums[0];
         if (nums[0] != nums[1]) return nums[0];
         if(nums[nums.length - 1] != nums[nums.length - 2]) return nums[nums.length - 1];
@@ -17,5 +17,10 @@ public class SingleElementinaSortedArray {
             }
         }
         return -1;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1,1,2,2,3,3,4,5,5,6,6};
+        System.out.println(singleNonDuplicate(arr));
     }
 }
