@@ -15,7 +15,6 @@ public class FindSquareRootOfANumber {
         }
         return ans;
     }
-
     public static void main(String[] args) {
         System.out.println(squareRoot(25));
     }
