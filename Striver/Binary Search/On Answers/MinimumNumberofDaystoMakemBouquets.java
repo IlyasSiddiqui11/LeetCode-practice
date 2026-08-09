@@ -2,18 +2,18 @@ import java.util.Arrays;
 
 public class MinimumNumberofDaystoMakemBouquets {
     private static boolean isPossible(int[] bloomDay, int day, int m, int k){
-        int cnt = 0, noAdjFlowers = 0;
+        int cnt = 0, bouquet = 0;
         for(int i = 0; i < bloomDay.length; i++){
             if (bloomDay[i] <= day) {
                 cnt++;
             }
             else{
-                noAdjFlowers += (cnt / k);
+                bouquet += (cnt / k);
                 cnt = 0;
             }
         }
-        noAdjFlowers += (cnt / k);
-        return noAdjFlowers >= m;
+        bouquet += (cnt / k);
+        return bouquet >= m;
     }
     public int minDays(int[] bloomDay, int m, int k) {
         if(bloomDay.length < (long) m * k) return -1;
