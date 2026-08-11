@@ -12,7 +12,6 @@ public class FindtheSmallestDivisor {
         int maxValue = Arrays.stream(nums).max().getAsInt();
         int low = 1, high = maxValue;
         int ans = maxValue;
-
         while (low <= high) {
             int mid = low + (high - low) / 2;
             if (sumByD(nums, mid) <= threshold) {
