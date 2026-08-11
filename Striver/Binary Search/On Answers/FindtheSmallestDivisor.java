@@ -25,4 +25,9 @@ public class FindtheSmallestDivisor {
         }
         return ans;
     }
+
+    public static void main(String[] args) {
+        int[] arr = {1,2,5,11};
+        System.out.println(smallestDivisor(arr, 6));
+    }
 }
