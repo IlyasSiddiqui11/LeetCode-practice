@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class FindtheSmallestDivisor {
     private static int sumByD(int[] nums, int div){
         int sum = 0;
@@ -7,13 +9,8 @@ public class FindtheSmallestDivisor {
         return sum;
     }
     public static int smallestDivisor(int[] nums, int threshold) {
-        int minValue = Integer.MAX_VALUE;
-        int maxValue = Integer.MIN_VALUE;
-        for (int num : nums) {
-            minValue = Math.min(minValue, num);
-            maxValue = Math.max(maxValue, num);
-        }
-        int low = minValue, high = maxValue;
+        int maxValue = Arrays.stream(nums).max().getAsInt();
+        int low = 1, high = maxValue;
         int ans = maxValue;
 
         while (low <= high) {
