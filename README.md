@@ -15,7 +15,7 @@ The purpose of this repository is to:
 
 ## 💻 Languages Used
 
-* Java
+* Java.
 
 
 ## 🎯 Goals
