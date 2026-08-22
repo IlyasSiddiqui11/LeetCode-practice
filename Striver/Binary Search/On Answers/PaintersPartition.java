@@ -20,11 +20,11 @@ public class PaintersPartition{
         }
         return low;
     }
-    private static int cntPainters(ArrayList<Integer> arr, int paint){
+    private static int cntPainters(ArrayList<Integer> arr, int painters){
         int cntpainters = 1;
         long noOfPaints = 0;
         for(int i = 0; i < arr.size(); i++){
-            if (noOfPaints + arr.get(i) <= paint) {
+            if (noOfPaints + arr.get(i) <= painters) {
                 noOfPaints += arr.get(i);
             }
             else{
