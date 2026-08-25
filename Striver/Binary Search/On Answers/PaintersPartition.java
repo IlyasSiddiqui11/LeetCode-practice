@@ -1,12 +1,13 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 public class PaintersPartition{
-    public static int paintersPartition(ArrayList<Integer> arr, int k){
-        int low = Collections.max(arr);
-        int high = arr.stream().mapToInt(Integer::intValue).sum();
-        if (arr.size() < k) {
+    public static int paintersPartition(int[] arr, int k){
+        int low = Arrays.stream(arr).max().getAsInt();
+        int high = Arrays.stream(arr).sum();
+        if (arr.length < k) {
             return -1;
         }
         while (low <= high) {
@@ -20,16 +21,16 @@ public class PaintersPartition{
         }
         return low;
     }
-    private static int cntPainters(ArrayList<Integer> arr, int painters){
+    private static int cntPainters(int[] arr, int painters){
         int cntpainters = 1;
         long noOfPaints = 0;
-        for(int i = 0; i < arr.size(); i++){
-            if (noOfPaints + arr.get(i) <= painters) {
-                noOfPaints += arr.get(i);
+        for(int i = 0; i < arr.length; i++){
+            if (noOfPaints + arr[i] <= painters) {
+                noOfPaints += arr[i];
             }
             else{
                 cntpainters++;
-                noOfPaints = arr.get(i);
+                noOfPaints = arr[i];
             }
         }
         return cntpainters; 
