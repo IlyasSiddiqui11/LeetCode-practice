@@ -37,7 +37,7 @@ public class PaintersPartition{
     }
 
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>(List.of(10,20,30,40));
+        int[] list = {10,20,30,40};
         System.out.println(paintersPartition(list, 2));
     }
 }
