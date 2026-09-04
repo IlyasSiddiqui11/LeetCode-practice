@@ -49,4 +49,5 @@ public class MinimizeMaxDistancetoGasStation {
 
     public static void main(String[] args) {
         
+    }
 }
