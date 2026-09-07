@@ -47,6 +47,45 @@ public class MinimizeMaxDistancetoGasStation {
         return pq.peek().distance;
     }
 
+    // Binary Search
+    private static int noOfGasStationsRequired(int[] arr, double dist){
+        int cnt = 0;
+
+        for (int i = 1; i < arr.length; i++) {
+            int numberInBetween = (int) ((arr[i] - arr[i - 1]) / dist);
+            if ((arr[i] - arr[i - 1]) == (dist * numberInBetween)) {
+                numberInBetween--;
+            }
+            cnt += numberInBetween;
+        }
+
+        return cnt;
+    }
+
+    public double minimiseMaxDistance(int[] arr, int k) {
+        int n = arr.length;
+        double low = 0, high = 0;
+
+        for (int i = 0; i < n - 1; i++) {
+            high = Math.max(high, arr[i + 1] - arr[i]);
+        }
+
+        double diff = 1e-6;
+
+        while (high - low > diff) {
+            double mid = (low + high) / 2.0;
+            int count = noOfGasStationsRequired(arr, mid);
+
+            if (count > k) {
+                low = mid;
+            } else {
+                high = mid;
+            }
+        }
+
+        return high;
+
+    }
 
 
     public static void main(String[] args) {
