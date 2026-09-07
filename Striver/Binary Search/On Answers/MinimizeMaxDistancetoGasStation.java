@@ -58,7 +58,6 @@ public class MinimizeMaxDistancetoGasStation {
             }
             cnt += numberInBetween;
         }
-
         return cnt;
     }
 
