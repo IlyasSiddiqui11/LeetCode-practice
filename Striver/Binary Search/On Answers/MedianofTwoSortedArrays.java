@@ -55,11 +55,68 @@ public class MedianofTwoSortedArrays {
         return nums3[nums3.length / 2];
     }
 
+    public static double findMedianSortedArraysBetter(int[] nums1, int[] nums2) {
+        int cnt = 0, i = 0, j = 0;
+        int idx1 = (nums1.length + nums2.length) / 2;
+        int idx2 = ((nums1.length + nums2.length) / 2) - 1;
+        int ele1 = -1, ele2 = -1;
+
+        while (i < nums1.length && j < nums2.length) {
+            if (nums1[i] < nums2[j]) {
+                if (cnt == idx1) {
+                    ele1 = nums1[i];
+                }
+                if (cnt == idx2) {
+                    ele2 = nums2[i];
+                }
+                cnt++;
+                i++;
+            }
+            else {
+                if (cnt == idx1) {
+                    ele1 = nums1[j];
+                }
+                if (cnt == idx2) {
+                    ele2 = nums2[j];
+                }
+                cnt++;
+                j++;
+            }
+        }
+
+        while (i < nums1.length) {
+            if (cnt == idx1) {
+                    ele1 = nums1[i];
+                }
+                if (cnt == idx2) {
+                    ele2 = nums2[i];
+                }
+                cnt++;
+                i++;
+        }
+
+        while (j < nums1.length) {
+            if (cnt == idx1) {
+                    ele1 = nums1[j];
+                }
+                if (cnt == idx2) {
+                    ele2 = nums2[j];
+                }
+                cnt++;
+                j++;
+        }
+
+        int n = nums1.length + nums2.length;
+        if (n % 2 == 1) {
+            return ele1;
+        }
+        return (ele1 + ele2) / 2.0;
+    }
 
     public static void main(String[] args) {
-        int[] arr1 = { 2,3,4 };
-        int[] arr2 = { 1,3 };
+        int[] arr1 = {1,3,4,7,10,12};
+        int[] arr2 = {2,3,6,15};
 
-        System.out.println(findMedianSortedArraysBrute(arr1, arr2));
+        System.out.println(findMedianSortedArraysBetter(arr1, arr2));
     }
 }
