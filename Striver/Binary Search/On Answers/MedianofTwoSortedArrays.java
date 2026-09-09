@@ -63,47 +63,31 @@ public class MedianofTwoSortedArrays {
 
         while (i < nums1.length && j < nums2.length) {
             if (nums1[i] < nums2[j]) {
-                if (cnt == idx1) {
-                    ele1 = nums1[i];
-                }
-                if (cnt == idx2) {
-                    ele2 = nums2[i];
-                }
+                if (cnt == idx1) ele1 = nums1[i];
+                if (cnt == idx2) ele2 = nums2[i];
                 cnt++;
                 i++;
             }
             else {
-                if (cnt == idx1) {
-                    ele1 = nums1[j];
-                }
-                if (cnt == idx2) {
-                    ele2 = nums2[j];
-                }
+                if (cnt == idx1) ele1 = nums1[j];
+                if (cnt == idx2) ele2 = nums2[j];
                 cnt++;
                 j++;
             }
         }
 
         while (i < nums1.length) {
-            if (cnt == idx1) {
-                    ele1 = nums1[i];
-                }
-                if (cnt == idx2) {
-                    ele2 = nums2[i];
-                }
-                cnt++;
-                i++;
+            if (cnt == idx1) ele1 = nums1[i];
+            if (cnt == idx2) ele2 = nums2[i];
+            cnt++;
+            i++;
         }
 
         while (j < nums1.length) {
-            if (cnt == idx1) {
-                    ele1 = nums1[j];
-                }
-                if (cnt == idx2) {
-                    ele2 = nums2[j];
-                }
-                cnt++;
-                j++;
+            if (cnt == idx1) ele1 = nums1[j];
+            if (cnt == idx2) ele2 = nums2[j];
+            cnt++;
+            j++;
         }
 
         int n = nums1.length + nums2.length;
