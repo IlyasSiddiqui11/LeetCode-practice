@@ -1,3 +1,65 @@
 public class MedianofTwoSortedArrays {
-    
+
+    public static void merge(int[] nums1, int m, int[] nums2, int n) {
+        int i = m - 1, j = n - 1, idx = m + n - 1;
+        while (i >= 0 && j >= 0) {
+            if (nums1[i] > nums2[j]) {
+                nums1[idx] = nums1[i];
+                i--;
+                idx--;
+            } else {
+                nums1[idx] = nums2[j];
+                idx--;
+                j--;
+            }
+        }
+        while (j >= 0) {
+            nums1[idx] = nums2[j];
+            idx--;
+            j--;
+        }
+    }
+
+    public static double findMedianSortedArraysBrute(int[] nums1, int[] nums2) {
+        int[] nums3 = new int[nums1.length + nums2.length];
+        int i = 0;
+        int j = 0;
+        int k = 0;
+
+        while (i < nums1.length && j < nums2.length) {
+            if (nums1[i] <= nums2[j]) {
+                nums3[k] = nums1[i];
+                i++;
+            } else {
+                nums3[k] = nums2[j];
+                j++;
+            }
+            k++;
+        }
+        while (i < nums1.length) {
+            nums3[k] = nums1[i];
+            i++;
+            k++;
+        }
+        while (j < nums2.length) {
+            nums3[k] = nums2[j];
+            j++;
+            k++;
+        }
+
+        if (nums3.length % 2 == 0) {
+            int ele1 = nums3[nums3.length / 2];
+            int ele2 = nums3[(nums3.length / 2) - 1];
+            return (ele1 + ele2) / 2.0;
+        }
+        return nums3[nums3.length / 2];
+    }
+
+
+    public static void main(String[] args) {
+        int[] arr1 = { 2,3,4 };
+        int[] arr2 = { 1,3 };
+
+        System.out.println(findMedianSortedArraysBrute(arr1, arr2));
+    }
 }
