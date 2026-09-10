@@ -97,6 +97,11 @@ public class MedianofTwoSortedArrays {
         return (ele1 + ele2) / 2.0;
     }
 
+    // Binary Search
+    public static double findMedianSortedArrays(int[] nums1, int[] nums2){
+        
+    }
+
     public static void main(String[] args) {
         int[] arr1 = {1,3,4,7,10,12};
         int[] arr2 = {2,3,6,15};
