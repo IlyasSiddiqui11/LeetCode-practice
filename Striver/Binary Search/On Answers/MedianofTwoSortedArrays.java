@@ -125,7 +125,7 @@ public class MedianofTwoSortedArrays {
             }
         }
         return 0.0;
-    }
+    }  
 
     public static void main(String[] args) {
         int[] arr1 = {1,3,4,7,10,12};
