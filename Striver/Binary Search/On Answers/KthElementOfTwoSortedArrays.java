@@ -42,6 +42,6 @@ public class KthElementOfTwoSortedArrays {
                 low = partitionA + 1;
             }
         }
-        return 0;
+        return -1;
     }
 }
