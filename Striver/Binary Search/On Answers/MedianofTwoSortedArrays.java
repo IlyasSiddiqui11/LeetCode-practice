@@ -36,46 +36,49 @@ public class MedianofTwoSortedArrays {
     }
 
     public static double findMedianSortedArraysBetter(int[] nums1, int[] nums2) {
-        int cnt = 0, i = 0, j = 0;
-        int idx1 = (nums1.length + nums2.length) / 2;
-        int idx2 = ((nums1.length + nums2.length) / 2) - 1;
-        int ele1 = -1, ele2 = -1;
 
-        while (i < nums1.length && j < nums2.length) {
-            if (nums1[i] < nums2[j]) {
-                if (cnt == idx1) ele1 = nums1[i];
-                if (cnt == idx2) ele2 = nums2[i];
-                cnt++;
-                i++;
-            }
-            else {
-                if (cnt == idx1) ele1 = nums1[j];
-                if (cnt == idx2) ele2 = nums2[j];
-                cnt++;
-                j++;
-            }
-        }
+    int cnt = 0, i = 0, j = 0;
 
-        while (i < nums1.length) {
+    int idx1 = (nums1.length + nums2.length) / 2;
+    int idx2 = idx1 - 1;
+
+    int ele1 = -1, ele2 = -1;
+
+    while (i < nums1.length && j < nums2.length) {
+        if (nums1[i] < nums2[j]) {
             if (cnt == idx1) ele1 = nums1[i];
-            if (cnt == idx2) ele2 = nums2[i];
+            if (cnt == idx2) ele2 = nums1[i];
             cnt++;
             i++;
-        }
-
-        while (j < nums1.length) {
-            if (cnt == idx1) ele1 = nums1[j];
+        } else {
+            if (cnt == idx1) ele1 = nums2[j];
             if (cnt == idx2) ele2 = nums2[j];
             cnt++;
             j++;
         }
-
-        int n = nums1.length + nums2.length;
-        if (n % 2 == 1) {
-            return ele1;
-        }
-        return (ele1 + ele2) / 2.0;
     }
+
+    while (i < nums1.length) {
+        if (cnt == idx1) ele1 = nums1[i];
+        if (cnt == idx2) ele2 = nums1[i];
+        cnt++;
+        i++;
+    }
+
+    while (j < nums2.length) {
+        if (cnt == idx1) ele1 = nums2[j];
+        if (cnt == idx2) ele2 = nums2[j];
+        cnt++;
+        j++;
+    }
+
+    int n = nums1.length + nums2.length;
+    if (n % 2 == 1) {
+        return ele1;
+    }
+    
+    return (ele1 + ele2) / 2.0;
+}
 
     // Binary Search
     public static double findMedianSortedArrays(int[] nums1, int[] nums2){
