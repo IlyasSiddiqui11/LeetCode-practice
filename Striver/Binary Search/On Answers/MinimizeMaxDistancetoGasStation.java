@@ -32,7 +32,7 @@ public class MinimizeMaxDistancetoGasStation {
         PriorityQueue<Pair> pq = new PriorityQueue<>((a,b) -> Double.compare(a.distance, b.distance));
         int[] howMany = new int[arr.length - 1];
         for(int i = 0; i < arr.length - 1; i++){
-            pq.add(new Pair(arr[i = 1] - arr[i], i));
+            pq.add(new Pair(arr[i + 1] - arr[i], i));
         }
         for(int gasS = 1; gasS <= k; gasS++){
             Pair top = pq.poll();
