@@ -8,7 +8,7 @@ public class FindTheRowWithMaximumNumberOf1s {
                     cnt++;
                 }
                 if (cnt > maxCnt) {
-                    maxCnt = Math.max(maxCnt, cnt);
+                    maxCnt = cnt;
                     index = i;
                 }
             }
