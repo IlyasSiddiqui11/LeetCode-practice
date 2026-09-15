@@ -1,8 +1,8 @@
 public class SearchinA2DMatrix {
-    
+
     public boolean searchMatrixBetter(int[][] matrix, int target) {
-        for(int i = 0; i < matrix[0].length-1; i++){
-            if (matrix[i][0] < target && matrix[i][matrix.length - 1] > target) {
+        for(int i = 0; i < matrix.length - 1; i++){
+            if (matrix[i][0] < target && matrix[i][matrix[0].length - 1] > target) {
                 return search(matrix[i], target);
             }
         }
@@ -22,5 +22,9 @@ public class SearchinA2DMatrix {
             }
         }
         return false;
+    }
+
+    public boolean searchMatrix(int[][] matrix, int target) {
+
     }
 }
