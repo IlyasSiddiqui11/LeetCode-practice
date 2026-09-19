@@ -3,6 +3,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class MedianofRowWiseSortedMatrix {
+    
     public int findMedianBrute(int[][] matrix) {
         int n = matrix.length;
         int m = matrix[0].length;
@@ -15,4 +16,5 @@ public class MedianofRowWiseSortedMatrix {
         Collections.sort(ls);
         return ls.get((n+m)/2);
     }
+
 }
