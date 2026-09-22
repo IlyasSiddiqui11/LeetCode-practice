@@ -1,6 +1,7 @@
 package Striver.Recursion;
 
 public class CheckIfthereexistsasubsequencewithsumK {
+    
     public boolean checkSubsequenceSum(int[] nums, int k) {
         if (nums.length == 0)
             return k == 0;
