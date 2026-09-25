@@ -1,6 +1,6 @@
 public class FindPeakElementII {
     public int[] findPeakGrid(int[][] mat) {
-        int low = 0, high = mat.length - 1;
+        int low = 0, high = mat[0].length - 1;
         while (low <= high) {
             int mid = low + (high - low) /2;
             int row = maxElement(mat, mid);
